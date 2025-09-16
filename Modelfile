@@ -1,0 +1,12 @@
+FROM tinyllama
+
+# Optional system prompt
+SYSTEM "You are a helpful assistant specialized in PDF-based knowledge retrieval."
+
+# Optional template
+TEMPLATE """{{ .System }}
+
+Context:
+{{ .Prompt }}
+
+Answer:"""
